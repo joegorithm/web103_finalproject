@@ -4,18 +4,29 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 
 ## List of Pages
 
-[👉🏾👉🏾👉🏾 List the pages you expect to have in your app, with a ⭐ next to pages you have wireframed]
+ - Home page
+ - Favorite Songs page ⭐
+ - Favorite Artists page
+ - Favorite Genres page
+ - Add a Song page ⭐
+ - Add an Artist page ⭐
+ - Add a Genre page
+ - Edit a Song page
+ - Edit an Artist page
+ - Edit a Genre page
+ - View a Song page
+ - View an Artist page
+ - View a Genre page
 
-## Wireframe 1: [page title]
 
-[👉🏾👉🏾👉🏾 include wireframe 1]
+## Wireframe 1: Favorite Songs page
 
-## Wireframe 2: [page title]
+![Wireframe of Favorite Songs page](wireframes/songs-page.png)
 
-[👉🏾👉🏾👉🏾 include wireframe 2]
+## Wireframe 2: Add a Song page
 
-## Wireframe 3: [page title]
+![Wireframe of Add a Song page](wireframes/add-song-page.png)
 
-[👉🏾👉🏾👉🏾 include wireframe 3]
+## Wireframe 3: Add an Artist page
 
-[👉🏾👉🏾👉🏾 include more wireframes as desired]
+![Wireframe of Add an Artist page](wireframes/add-artist-page.png)
