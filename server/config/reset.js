@@ -62,12 +62,45 @@ const seedData = `
     (5, 1), (5, 3);
 `
 
+async function fetchArtwork(title, artistName) {
+  try {
+    const query = encodeURIComponent(`${title} ${artistName}`)
+    const res = await fetch(`https://itunes.apple.com/search?term=${query}&media=music&entity=song&limit=1`)
+    const data = await res.json()
+    const art = data.results?.[0]?.artworkUrl100
+    return art ? art.replace('100x100bb', '500x500bb') : null
+  } catch {
+    return null
+  }
+}
+
+async function populateArtwork() {
+  const songs = await pool.query(`
+    SELECT songs.id, songs.title, artists.name AS artist_name
+    FROM songs
+    JOIN artists ON songs.artist_id = artists.id
+  `)
+
+  for (const song of songs.rows) {
+    const image_url = await fetchArtwork(song.title, song.artist_name)
+    if (image_url) {
+      await pool.query('UPDATE songs SET image_url = $1 WHERE id = $2', [image_url, song.id])
+      console.log(`Artwork fetched: ${song.title}`)
+    } else {
+      console.log(`No artwork found: ${song.title}`)
+    }
+  }
+}
+
 async function reset() {
   try {
     await pool.query(createTables)
     console.log('Tables created')
     await pool.query(seedData)
     console.log('Seed data inserted')
+    console.log('Fetching artwork...')
+    await populateArtwork()
+    console.log('Artwork populated')
   } catch (err) {
     console.error('Reset failed:', err)
   } finally {
