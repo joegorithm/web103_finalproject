@@ -24,41 +24,41 @@ Backend:
 
 ## Features
 
-### Add Artist
+### ✅ Add Artist
 
 The user will be able to add an artist to their favorites list.
 
-[gif goes here]
+![Add artist walkthrough gif](/media/add-artist-walkthrough.gif)
 
-### Add Song
+### ✅ Add Song
 
 The user will be able to add a song to their favorites list.
 
-[gif goes here]
+![Add song walkthrough gif](/media/add-song-walkthrough.gif)
 
-### Edit Artist
+### ✅ Edit Artist
 
 The user should be able to edit artist names. 
 
-[gif goes here]
+![Edit artist walkthrough gif](/media/edit-artist-walkthrough.gif)
 
-### Delete Song
+### ✅ Delete Song
 
 The user will be able to delete a song from their favorites list
 
-[gif goes here]
+![Delete song walkthrough gif](/media/delete-song-walkthrough.gif)
 
-### Delete Music Genre
+### ✅ Delete Music Genre
 
 The user will be able to delete a music genre from their favorites list.
 
-[gif goes here]
+![Delete music genre walkthrough gif](/media/delete-genre-walkthrough.gif)
 
-### Graceful Error Handling
+### ✅ Graceful Error Handling
 
 The users will receive user friendly errors so that they know what happened.  
 
-[gif goes here]
+![Graceful error handling walkthrough gif](/media/graceful-error-handling-walkthrough.gif)
 
 ## Installation Instructions
 
